@@ -1,0 +1,119 @@
+{
+    "@context": "/contexts/Book",
+    "@id": "/books",
+    "@type": "hydra:Collection",
+    "hydra:member": [
+      {
+        "@id": "/books/3ab04adf-829c-4c54-9c13-e2184b461ce8",
+        "@type": "http://schema.org/Book",
+        "isbn": "0-6197-2858-2",
+        "title": "HUGE SUCCESS",
+        "description": "This was a triumph",
+        "author": "Making a Note Here",
+        "publicationDate": "2019-05-15T00:00:00+00:00",
+        "reviews": []
+      },
+      {
+        "@id": "/books/3bb6ba6d-375f-4265-a862-b13a15708fa0",
+        "@type": "http://schema.org/Book",
+        "isbn": "9785040861118",
+        "title": "coucou",
+        "description": "book de Coucou",
+        "author": "moi",
+        "publicationDate": "2019-05-16T00:00:00+00:00",
+        "reviews": []
+      },
+      {
+        "@id": "/books/7720cc6a-a029-42f0-8e29-c9a1efbea986",
+        "@type": "http://schema.org/Book",
+        "isbn": "0-2466-9193-X",
+        "title": "r",
+        "description": "r",
+        "author": "4",
+        "publicationDate": "2015-05-05T00:00:00+00:00",
+        "reviews": [
+          {
+            "@id": "/reviews/d9a0697f-440d-4a9a-843a-85da493bece0",
+            "@type": "http://schema.org/Review",
+            "body": "test"
+          }
+        ]
+      },
+      {
+        "@id": "/books/985e94f7-3a63-4765-b1db-323b48ae9e2f",
+        "@type": "http://schema.org/Book",
+        "isbn": "0-2466-9193-X",
+        "title": "wow",
+        "description": "are you thankful? No",
+        "author": "blizzard",
+        "publicationDate": "2019-05-15T00:00:00+00:00",
+        "reviews": []
+      },
+      {
+        "@id": "/books/c22dad11-c978-4ea6-a89b-cd945eb28f56",
+        "@type": "http://schema.org/Book",
+        "isbn": "",
+        "title": "test",
+        "description": "mooi boek",
+        "author": "ikke",
+        "publicationDate": "1999-01-02T00:00:00+00:00",
+        "reviews": []
+      }
+    ],
+    "hydra:totalItems": 5,
+    "hydra:search": {
+      "@type": "hydra:IriTemplate",
+      "hydra:template": "/books{?properties[],order[id],order[title],order[author],order[isbn],order[publicationDate],title,author}",
+      "hydra:variableRepresentation": "BasicRepresentation",
+      "hydra:mapping": [
+        {
+          "@type": "IriTemplateMapping",
+          "variable": "properties[]",
+          "property": null,
+          "required": false
+        },
+        {
+          "@type": "IriTemplateMapping",
+          "variable": "order[id]",
+          "property": "id",
+          "required": false
+        },
+        {
+          "@type": "IriTemplateMapping",
+          "variable": "order[title]",
+          "property": "title",
+          "required": false
+        },
+        {
+          "@type": "IriTemplateMapping",
+          "variable": "order[author]",
+          "property": "author",
+          "required": false
+        },
+        {
+          "@type": "IriTemplateMapping",
+          "variable": "order[isbn]",
+          "property": "isbn",
+          "required": false
+        },
+        {
+          "@type": "IriTemplateMapping",
+          "variable": "order[publicationDate]",
+          "property": "publicationDate",
+          "required": false
+        },
+        {
+          "@type": "IriTemplateMapping",
+          "variable": "title",
+          "property": "title",
+          "required": false
+        },
+        {
+          "@type": "IriTemplateMapping",
+          "variable": "author",
+          "property": "author",
+          "required": false
+        }
+      ]
+    }
+  }
