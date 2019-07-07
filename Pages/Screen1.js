@@ -15,6 +15,7 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
+  RefreshControl,
 
 
 
@@ -53,6 +54,7 @@ export default class Screen1 extends Component<Props> {
             allBooks: [],
             currentItem: 8,
             end: false,
+            isRefreshing: false,
 
 
 
@@ -79,6 +81,7 @@ export default class Screen1 extends Component<Props> {
               console.log(jsonData['hydra:member']);
               this.setState({
                 allBooks: jsonData['hydra:member'],
+                isRefreshing: false,
               })
               
 
@@ -129,7 +132,7 @@ export default class Screen1 extends Component<Props> {
     _toast(text) {
       Toast.show(text,{
             duration: Toast.durations.LONG,
-            position: Toast.positions.CENTER,
+            position: Toast.positions.BOTTOM,
             // shadow: true,
             // animation: true,
             // hideOnPress: true,
@@ -299,6 +302,17 @@ export default class Screen1 extends Component<Props> {
     }
 
 
+    _onRefresh = () =>{
+
+      this.setState({
+        isRefreshing: true,
+      })
+
+
+      console.log('refresh!');
+
+      this.getData();
+    }
 
 
 
@@ -316,6 +330,19 @@ export default class Screen1 extends Component<Props> {
           
 
            <ScrollView
+
+
+              refreshControl={
+                         <RefreshControl
+                            refreshing={this.state.isRefreshing}
+                            onRefresh={this._onRefresh.bind(this)}
+                            tintColor="#d0d0d0"
+                            title="加載中..."
+                            titleColor="#6c6c6c"
+
+                            progressBackgroundColor="#ffffff"
+                          />
+                    }
 
               onScroll = {this._contentViewScroll}
               scrollEventThrottle={0}
