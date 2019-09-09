@@ -11,3 +11,7 @@
 ## 進階要求
 1. 使用 [Redux](https://github.com/reduxjs/redux)。
 2. 將[圖書列表]頁面加載更多的按鈕功能改為滾動實現。
+
+##
+1. npm install
+2. npm start
