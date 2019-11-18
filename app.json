@@ -1,0 +1,7 @@
+{
+  "name": "MobileProject",
+  "displayName": "MobileProject",
+  "settingsLOCAL": {
+    "demoFoundationApi": "https://demo.api-platform.com"
+  }
+}

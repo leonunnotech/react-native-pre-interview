@@ -1,0 +1,9 @@
+export const ADD = 'ADD';
+export const DELETE = 'DELETE';
+export const GETALL = 'GETALL';
+export const UPDATE = 'UPDATE';
+export const GETONE = 'GETONE';
+export const GETREVIEWS = 'GETREVIEWS';
+export const GET_CURRENT_ID = 'GET_CURRENT_ID';
+export const ADD_NEW_FORM = 'ADD_NEW_FORM';
+export const FAILURE = 'FAILURE';
